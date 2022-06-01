@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeacherPage">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF000;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab style="-fx-pref-width: 140; -fx-background-color: #FFBB88;" text="Description">
+            <content>
+                  <ScrollPane style="-fx-background-color: #FFD9BA;">
+                     <content>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="390.0" prefWidth="649.0" style="-fx-spacing: 20; -fx-background-color: #FFD9BA;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#UploadDes" prefHeight="25.0" prefWidth="155.0" text="Upload Description">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <TextArea fx:id="DesField" prefHeight="100.0" prefWidth="485.0">
+                                       <HBox.margin>
+                                          <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                       </HBox.margin>
+                                    </TextArea>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="DescriptionLabel" style="-fx-translate-x: 10;" text="Label">
+                                 <VBox.margin>
+                                    <Insets left="35.0" top="30.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-pref-width: 140; -fx-background-color: #FFBB88; -fx-alignment: center;" text="Lectures">
+            <content>
+                  <VBox alignment="CENTER" style="-fx-background-color: #FFD9BA;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadL1" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="L1field" prefHeight="25.0" prefWidth="487.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L1" mnemonicParsing="false" onAction="#OL1" text="Lecture 1">
+                           <VBox.margin>
+                              <Insets bottom="30.0" top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadL2" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="L2field" prefHeight="25.0" prefWidth="493.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L2" mnemonicParsing="false" onAction="#OL2" text="Lecture 2">
+                           <VBox.margin>
+                              <Insets bottom="30.0" top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadL3" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="L3field" prefHeight="25.0" prefWidth="498.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L3" mnemonicParsing="false" onAction="#OL3" text="Lecture 3">
+                           <VBox.margin>
+                              <Insets bottom="30.0" top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children></VBox>
+            </content>
+          </Tab>
+            <Tab style="-fx-pref-width: 140; -fx-background-color: #FFBB88; -fx-alignment: center;" text="Sheets">
+              <content>
+                  <VBox alignment="CENTER" style="-fx-background-color: #FFD9BA;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadS1" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="S1field" prefHeight="25.0" prefWidth="487.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L11" mnemonicParsing="false" onAction="#OA1" text="Assignment 1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadS2" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="S2field" prefHeight="25.0" prefWidth="493.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L21" mnemonicParsing="false" onAction="#OA2" text="Assignment 2" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadS3" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="S3field" prefHeight="25.0" prefWidth="498.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L31" mnemonicParsing="false" onAction="#OA3" text="Assignment 3" />
+                     </children></VBox>
+              </content>
+            </Tab>
+            <Tab style="-fx-pref-width: 140; -fx-background-color: #FFBB88; -fx-alignment: center;" text="Quizzes">
+              <content>
+                  <VBox alignment="CENTER" style="-fx-background-color: #FFD9BA;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadQ1" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="Q1field" prefHeight="25.0" prefWidth="487.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L111" mnemonicParsing="false" onAction="#OQ1" text="Quiz 1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadQ2" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="Q2field" prefHeight="25.0" prefWidth="493.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L211" mnemonicParsing="false" onAction="#OQ2" text="Quiz 2" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#UploadQ3" text="Upload">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="Q3field" prefHeight="25.0" prefWidth="498.0">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="L311" mnemonicParsing="false" onAction="#OQ3" text="Quiz 3" />
+                     </children></VBox>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0" style="-fx-spacing: 350; -fx-background-color: #FF5F5D;" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label fx:id="CourseName" text="Course name" textFill="#fff7e6">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox alignment="CENTER" prefHeight="420.0" prefWidth="70.0" style="-fx-background-color: #F2B181;" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets top="45.0" />
+         </opaqueInsets>
+         <children>
+            <Button mnemonicParsing="false" onAction="#BackToStudentPage" style="-fx-background-color: #FF8C8C;" text="Back" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="60.0" top="60.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
