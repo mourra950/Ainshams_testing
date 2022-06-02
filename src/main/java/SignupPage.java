@@ -11,23 +11,17 @@ import java.sql.SQLException;
 
 public class SignupPage {
 
-    @FXML
-    private Button BackButton;
+    public Button BackButton;
 
-    @FXML
-    private TextField Email;
+    public TextField Email;
 
-    @FXML
-    private TextField Name;
+    public TextField Name;
 
-    @FXML
-    private TextField Password;
+    public TextField Password;
 
-    @FXML
-    private TextField Phone;
+    public TextField Phone;
 
-    @FXML
-    private Button SignUpButton;
+    public Button SignUpButton;
 
     @FXML
     void BackToMain(ActionEvent event) throws IOException {
@@ -44,14 +38,12 @@ public class SignupPage {
         try {
             if (!Name.getText().isEmpty() && !Password.getText().isEmpty() && !Phone.getText().isEmpty() && !Email.getText().isEmpty()) {
                 DBconnector.connect("INSERT INTO `main`.`Users`(`email`,`password`,`phone`,`name`) VALUES ('" + Email.getText() + "','" + Password.getText() + "','" + Phone.getText() + "','" + Name.getText() + "');");
+            } else {
+                Alertbox.display("Error", "can not be empty");
             }
-            else {
-                Alertbox.display("Error","can not be empty");
-            }
-        }
-        catch (Exception e)
-        {
-            Alertbox.display("SQl Error","the email already exists");
+        } catch (Exception e) {
+            Alertbox.display("SQl Error", "the email already exists");
         }
     }
+
 }

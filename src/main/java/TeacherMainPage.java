@@ -12,6 +12,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TeacherMainPage {
+
+    @FXML
+    private Button LogoutButton;
     @FXML
     private Button b;
     @FXML
@@ -43,6 +46,7 @@ public class TeacherMainPage {
 
     @FXML
     void Logout(ActionEvent event) throws IOException {
+
         LoginPage.CourseName=null;
         FXMLLoader fxmlLoader = new FXMLLoader(SignupPage.class.getResource("LoginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

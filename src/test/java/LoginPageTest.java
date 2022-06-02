@@ -13,7 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Objects;
 
-public class LoginPage {
+public class LoginPageTest {
 
    public TextField Password;
 
@@ -28,7 +28,7 @@ public class LoginPage {
 
     public void GotoSignUpPage(ActionEvent actionEvent) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("SignupPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginPageTest.class.getResource("SignupPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) Email.getScene().getWindow();
         stage.setTitle("Sign Up");
@@ -59,7 +59,7 @@ public class LoginPage {
                     System.out.println(admin);
                     if (!Objects.equals(admin, "true")) {
                         System.out.println(admin == "true");
-                        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("StudentPage.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(LoginPageTest.class.getResource("StudentPage.fxml"));
                         Scene scene = new Scene(fxmlLoader.load());
 
                         Stage stage = (Stage) Email.getScene().getWindow();
@@ -68,7 +68,7 @@ public class LoginPage {
                         stage.show();
                     } else {
                         System.out.println(admin);
-                        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("TeacherMainPage.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(LoginPageTest.class.getResource("TeacherMainPage.fxml"));
                         Scene scene = new Scene(fxmlLoader.load());
                         Stage stage = (Stage) Email.getScene().getWindow();
                         stage.setTitle("Login");
