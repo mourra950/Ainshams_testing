@@ -7,16 +7,23 @@ public class StudentList {
 
     ArrayList<String> arr1 = new ArrayList<String>();
 
-    public String check_list(String sList[][]) {
-        for (int i = 0; i <= sList.length; i++) {
-            if (Teacher_course.equals(sList[i][2])) {
+    Boolean check=false;
+    public String check_list(String sList[][],String course) {
+        for (int i = 0; i < sList.length; i++) {
+            if (course.equals(sList[i][2])) {
                 arr1.add(sList[i][1]);
-                Display();
-
+                check = true;
             }
-            return "the student is successfully added to list";
         }
-        return "the student isnot in the course";
+        Display();
+   if(check==false){
+    return "the student isnot in the course";
+    }
+  else {
+
+    return "the student is successfully added to list";
+}
+
     }
     public void Display ()
     {
@@ -26,5 +33,24 @@ public class StudentList {
             System.out.print(arr1.get(i));
             System.out.println("");
         }
+    }
+    Boolean check1=false;
+    public String remove(String sList[][],String id,String Course) {
+        for (int i = 0; i < sList.length; i++) {
+
+            if (Course.equals(sList[i][2])&& id.equals(sList[i][1])) {
+                arr1.remove(id);
+                check1 = true;
+            }
+        }
+        Display();
+        if(check1==false){
+            return "the student isnot in the course";
+        }
+        else {
+
+            return "the student is successfully removed";
+        }
+
     }
 }
