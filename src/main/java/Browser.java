@@ -9,7 +9,10 @@ public class Browser {
             URI u = new URI(url);
             java.awt.Desktop.getDesktop().browse(u);
             System.out.println("ana hena");
+ for (int i=0;i<0;i++)
+ {
 
+ }
         }
 
         catch (Exception e)
