@@ -3,7 +3,7 @@ import java.net.URI;
 public class Browser {
 
 
-    public static void open(String url) throws Exception {
+    public static short open(String url) throws Exception {
         System.out.println(url);
         try {
             URI u = new URI(url);
@@ -18,5 +18,6 @@ public class Browser {
 
             throw new Exception();
         }
+        return 0;
     }
 }
