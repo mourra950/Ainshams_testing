@@ -15,16 +15,18 @@ public class TeacherPage {
             add("www.youtube.com");
         }
     };
-    public  ArrayList<String> arr_list = new ArrayList<String>();
+    public static ArrayList<String> arr_list = new ArrayList<String>();
 
-     String Teacher(String url) {
+     public String Teacher(String url) {
         //CourseStudent c=new CourseStudent();
         if (url.equals("")) {
+            System.out.println(arr_list);
             return "please fill in all the fields";
+
         } else if (Check_validity(url)) {
             arr.add(url);
             arr_list.addAll(arr);
-            System.out.println(arr);
+           // System.out.println(arr_list);
             display2();
             return "url updated";
         }
