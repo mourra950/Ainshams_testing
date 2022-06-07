@@ -21,6 +21,6 @@ class SignUp_loginTest {
     @Test
     public void check_integration3() throws SQLException {
         SignUp_login s_intg =new SignUp_login();
-        assertEquals("error , either you miss to fill blanks or your email already exists",s_intg.login_signup("rana","1234","0100399","rana.com"));
+        assertEquals("error , either you miss to fill blanks or your email already exists",s_intg.login_signup("rana","1234","",""));
     }
 }

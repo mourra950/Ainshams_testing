@@ -3,7 +3,6 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javafx.event.ActionEvent;
 public class TeacherPage {
 
     ArrayList<String> arr = new ArrayList<String>() {
@@ -13,6 +12,9 @@ public class TeacherPage {
             add("www.youtube.com");
         }
     };
+
+    ArrayList<String> arr_list = new ArrayList<String>();
+
     public String Teacher(String url) throws SQLException {
 
         if (url.equals("")) {
@@ -20,10 +22,17 @@ public class TeacherPage {
         }
           else if (Check_validity(url)) {
             arr.add(url);
-            Display();
+            arr_list.addAll(arr);
+            display2();
             return "url updated";
         }
         return "url is invalid";
+    }
+
+    public void display2() {
+        for (int i = 0; i < arr_list.size(); i++) {
+          System.out.println(arr_list.get(i));
+        }
     }
     public void Display ()
     {
