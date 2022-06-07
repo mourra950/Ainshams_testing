@@ -5,11 +5,10 @@ public class Teacher_stCourse_intgr {
 
     public static void integrate() {
         TeacherPage T = new TeacherPage();
-        T.Teacher("ahmed.com");
+        T.Teacher("https://www.geeksforgeeks.org/initialize-an-arraylist-in-java/");
         CourseStudent c = new CourseStudent();
-        //System.out.println(T.arr);
-        c.checkLink("ahmed.com", T.arr);
-
+        String statues =c.checkLink("https://www.geeksforgeeks.org/initialize-an-arraylist-in-java/", T.arr);
+        System.out.println(statues);
     }
     public static void main(String[] args){
         integrate();

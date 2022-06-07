@@ -9,7 +9,7 @@ public class CourseStudent {
             "www.google.com", "www.youtube.com"};
 
     public String checkLink(String url, ArrayList<String> arr) {
-        for (int i = 0; i < url1.length; i++) {
+        for (int i = 0; i < arr.size(); i++) {
             if (url.equals(arr.get(i)))
                 return "valid";
         }

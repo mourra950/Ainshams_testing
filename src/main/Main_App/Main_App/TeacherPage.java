@@ -20,16 +20,17 @@ public class TeacherPage {
      public String Teacher(String url) {
         //CourseStudent c=new CourseStudent();
         if (url.equals("")) {
-            System.out.println(arr_list);
+
             return "please fill in all the fields";
 
         } else if (Check_validity(url)) {
             arr.add(url);
+
             arr_list.addAll(arr);
-           // System.out.println(arr_list);
             display2();
             return "url updated";
         }
+
         return "url is invalid";
     }
 
@@ -42,7 +43,9 @@ public class TeacherPage {
     public boolean Check_validity(String url) {
         /* Try creating a valid URL */
         try {
+
             new URL(url).toURI();
+
             return true;
         }
         // If there was an Exception
