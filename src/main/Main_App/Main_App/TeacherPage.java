@@ -34,6 +34,25 @@ public class TeacherPage {
         return "url is invalid";
     }
 
+    ArrayList<String> arr1 = new ArrayList<String>();
+    Boolean check = false;
+    public String see_list(String sList[][],String course)
+    {
+
+        for (int i = 0; i < sList.length; i++) {
+            if (course.equals(sList[i][2])) {
+                arr1.add(sList[i][1]);
+                check = true;
+            }
+        }
+        if (check == false) {
+            return "the student isnot in the course";
+        } else {
+
+            return "the student is successfully added to list";
+        }
+    }
+
     public  void display2() {
         for (int i = 0; i < arr_list.size(); i++) {
             System.out.println(arr_list.get(i));

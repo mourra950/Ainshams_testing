@@ -4,11 +4,8 @@ import java.util.ArrayList;
 
 public class StudentList {
     String Teacher_course = "database";
-
-    ArrayList<String> arr1 = new ArrayList<String>();
-
+    public ArrayList<String> arr1 = new ArrayList<String>();
     Boolean check = false;
-
     public String check_list(String sList[][], String course) {
         for (int i = 0; i < sList.length; i++) {
             if (course.equals(sList[i][2])) {
@@ -23,9 +20,7 @@ public class StudentList {
 
             return "the student is successfully added to list";
         }
-
     }
-
     public void Display() {
         for (int i = 0; i < arr1.size(); i++) {
 

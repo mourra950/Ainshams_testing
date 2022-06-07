@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StudentListTest {
 
-
     String arr[][] = {{"shaimaa", "19p7484", "database"}, {"rana", "19p2468", "AI"}, {"yara", "19p1881", "database"}, {"aya", "19p1689", "database"}};
     String arr_remove[][] = {{"shaimaa", "19p7484", "database"}, {"rana", "19p2468", "AI"}, {"yara", "19p1881", "database"}, {"aya", "19p1689", "database"}};
 
