@@ -21,7 +21,7 @@ public void Exist_Email() throws SQLException {
     @Test
     public void NotFillBlanks2() throws SQLException {
         SignUpPage s=new SignUpPage();
-        assertEquals("please fill in all the fields",s.SignUp("yara","","0100399",""));
+        assertEquals("please fill in all the fields",s.SignUp("yara", "", "0100399", ""));
     }
     @Test
     public void Registered() throws SQLException {

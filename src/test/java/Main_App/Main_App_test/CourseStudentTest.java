@@ -1,10 +1,12 @@
 package Main_App.Main_App_test;
+
 import Main_App.CourseStudent;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 class CourseStudentTest {
     ArrayList<String> arr = new ArrayList<String>() {
         {
@@ -13,23 +15,23 @@ class CourseStudentTest {
             add("www.youtube.com");
         }
     };
+
     @Test
-    public void test1()
-    {
+    public void test1() {
         CourseStudent s1 = new CourseStudent();
-        assertEquals("INVALID",s1.checkLink("www.youtube.com",arr));
+        assertEquals("INVALID", s1.checkLink("www.youtube.com", arr));
     }
+
     @Test
-    public void test2()
-    {
+    public void test2() {
         CourseStudent s1 = new CourseStudent();
-        assertEquals("INVALID",s1.checkLink("youtube",arr));
+        assertEquals("INVALID", s1.checkLink("youtube", arr));
     }
+
     @Test
-    public void test3()
-    {
+    public void test3() {
         CourseStudent s1 = new CourseStudent();
-        assertEquals("valid",s1.checkLink("https://engasuedu.sharepoint.com/sites/CSE371UG2018-ControlEngineering24668/",arr));
+        assertEquals("valid", s1.checkLink("https://engasuedu.sharepoint.com/sites/CSE371UG2018-ControlEngineering24668", arr));
     }
 
 }

@@ -24,8 +24,8 @@ public class Student {
         this.name = name;
         this.id = id;
     }
-    public Student ()
-    {
+
+    public Student() {
 
     }
 }
