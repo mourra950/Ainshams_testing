@@ -3,9 +3,8 @@ package Main_App;
 import javafx.event.ActionEvent;
 
 import java.sql.SQLException;
-
 public class SignUpPage {
-    String arr[] = {"rana.com", "ahmed.com", "yara.com"};
+    String arr[] = {"rana.com", "ahmed.com", "yara.com","aya@gmail.com"};
 
     public String SignUp(String name, String Password, String Phone, String Email) throws SQLException {
 
@@ -25,8 +24,6 @@ public class SignUpPage {
 
                 return "registered successfully";
         }
-
     }
-
 }
 

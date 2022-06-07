@@ -10,16 +10,12 @@ public class SignUp_login {
 
     public String login_signup(String name, String Password, String Phone, String Email) throws SQLException {
         String array_signUp[] = {name, Password, Phone, Email};
-        //S.SignUp(name,Password,Phone,Email);
         String c = S.SignUp(name, Password, Phone, Email);
-        //System.out.println("mama helwa");
         if (c.equals("registered successfully")) {
             String login_data[][] = addX(arr.length, arr, array_signUp);
-            Display();
+            Display(login_data);
             String return_stmt = L.IsValid(Email, Password, login_data);
-            System.out.println("teta helw");
             if (return_stmt.equals("Valid")) {
-                System.out.println("mama helwa");
                 return "your account is opened successfully";
             } else {
                 return "error either your email or password is incorrect";
@@ -43,10 +39,10 @@ public class SignUp_login {
         return newarr;
     }
 
-    public void Display() {
-        for (int i = 0; i < arr.length; i++) {
+    public void Display(String login_data[][]) {
+        for (int i = 0; i < login_data.length; i++) {
             for (int j = 0; j < 4; j++) {
-                System.out.print(arr[i][j]);
+                System.out.print(login_data[i][j]);
                 System.out.println("");
             }
         }

@@ -6,31 +6,38 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LoginPageTest {
-    String login[][]={{"rana","1234","0100399","rana.com"},{"shaimaa","1234","0100399","Shaimaa.com"}};
+    String login[][]={{"rana","1234","0100399","rana@gmail.com"},{"shaimaa","1234554","0100399","Shaimaa@gmail.com"},
+            {"ahmed","aa21546","012648597","ahmed@gmail.com"}};
     @Test
-    public void test1()
+    public void Valid_Email_Password()
     {
         LoginPage ll = new LoginPage();
-        assertEquals("Valid",ll.IsValid("rana.com","1234",login));
+        assertEquals("Valid",ll.IsValid("rana@gmail.com","1234",login));
 
     }
     @Test
-    public void test2()
+    public void Invalid_email_password1()
     {
         LoginPage ll = new LoginPage();
         assertEquals("Valid",ll.IsValid("rana","1234",login));
     }
     @Test
-    public void test3()
+    public void Valid_email_wrong_password1()
     {
         LoginPage ll = new LoginPage();
-        assertEquals("INVALID",ll.IsValid("ahmed.com","1234",login));
+        assertEquals("INVALID",ll.IsValid("ahmed@gmail.com","1234",login));
     }
     @Test
-    public void test4()
+    public void Invalid_email_password2()
     {
         LoginPage ll = new LoginPage();
-        assertEquals("Valid",ll.IsValid("yara.com","@125rre",login));
+        assertEquals("INVALID",ll.IsValid("yara.com","@125rre",login));
+    }
+    @Test
+    public void Valid_email_wrong_password2()
+    {
+        LoginPage ll = new LoginPage();
+        assertEquals("in_correct password",ll.IsValid("Shaimaa@gmail.com","1234",login));
     }
 
 }
