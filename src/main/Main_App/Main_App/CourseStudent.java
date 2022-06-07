@@ -15,13 +15,5 @@ public class CourseStudent {
         }
         return "INVALID";
     }
-    public String checkLink(String url) {
-        ArrayList<String> arr =TeacherPage.arr_list;
-        for (int i = 0; i < url1.length; i++) {
-            if (url.equals(arr.get(i)))
 
-                return "valid";
-        }
-        return "INVALID";
-    }
 }
