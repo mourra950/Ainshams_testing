@@ -22,6 +22,7 @@ public class SignUpPage {
             if (check == true)
                 return "the email already exists";
             else
+
                 return "registered successfully";
         }
 

@@ -16,11 +16,11 @@ public void Email_check1() throws SQLException {
     @Test
     public void Email_check2() throws SQLException {
         SignUpPage s=new SignUpPage();
-        assertEquals("please fill in all the fields",s.SignUp("rana","1234","0100399",""));
+        assertEquals("please fill in all the fields",s.SignUp("yara","1234","0100399",""));
     }
     @Test
     public void Email_check3() throws SQLException {
         SignUpPage s=new SignUpPage();
-        assertEquals("registered successfully",s.SignUp("rana","1234","0100399","Shaimaa.com"));
+        assertEquals("registered successfully",s.SignUp("shaimaa","1234","0100399","Shaimaa.com"));
     }
 }
