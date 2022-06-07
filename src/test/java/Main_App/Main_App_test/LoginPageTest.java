@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LoginPageTest {
-    String[][] login = {{"rana.com","1234"},{"ahmed.com","26541"},{"yara.com","@125rre"}};
+    String login[][]={{"rana","1234","0100399","rana.com"},{"shaimaa","1234","0100399","Shaimaa.com"}};
     @Test
     public void test1()
     {
