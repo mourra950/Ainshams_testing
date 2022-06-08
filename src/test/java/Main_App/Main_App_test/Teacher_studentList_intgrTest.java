@@ -9,6 +9,11 @@ class Teacher_studentList_intgrTest {
     @Test
     public void check_integration(){
         Teacher_studentList_intgr t_i =new Teacher_studentList_intgr();
+        assertEquals("the integration failed",t_i.check_integration("rana","19p7484","shaimaa","19p7184"));
+    }
+    @Test
+    public void check_integration2(){
+        Teacher_studentList_intgr t_i =new Teacher_studentList_intgr();
         assertEquals("the integration successfully done",t_i.check_integration("rana","19p7484","shaimaa","19p7484"));
     }
 
